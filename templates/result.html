@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>The games result is as follows, are you ready!:</h2>
+
+<p>{{player1.name}} has played: {{player1.hand}}</p>
+<p>{{player2.name}} has played: {{player2.hand}}</p>
+
+{% if winner != None %}
+
+<p>{{winner.name}} wins with the...(can you feel the tension building...) {{winner.hand}}</p>
+
+{% else %}
+
+<p>What do you know we have a draw</p>
+
+{% endif %}
+
+{% endblock %}
